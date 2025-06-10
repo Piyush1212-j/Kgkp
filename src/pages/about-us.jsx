@@ -21,7 +21,7 @@ const AboutUs = () => {
   return (
     <MainLayout title=" About Us ">
       <HeroSection title=" About Us " />
-      <AboutInfo />
+      {/* <AboutInfo /> */}
       <OfficeAddress />
     </MainLayout>
   );
