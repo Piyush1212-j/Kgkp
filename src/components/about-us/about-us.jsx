@@ -22,7 +22,7 @@ const AboutInfo = () => {
             </div>
 
             <h3 className="text-center lg:text-4xl font-normal text-gray-800 mb-6">
-              KGK Realty (INDIA) Limited
+              (INDIA) Limited
             </h3>
 
             <div className="text-gray-700 text-sm leading-relaxed space-y-4 w-full lg:w-[77%] mx-auto">
