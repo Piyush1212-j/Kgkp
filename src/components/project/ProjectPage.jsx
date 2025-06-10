@@ -208,7 +208,6 @@ const fetchProjects = async () => {
             RESET
           </button>
         </div>
-{console.log("visibleProjects",visibleProjects)}
 
         {/* Project Cards */}
         {visibleProjects.length > 0 ? (
@@ -244,12 +243,12 @@ const fetchProjects = async () => {
                       )}
                       {projectType?.toLowerCase() == 'industrial' ? (
                         <div className="mt-2">
-                          {proj.reraApproved && (
+                          {proj.status ? (
                             <p className="text-green-600 text-sm flex items-center gap-1">
                               <CheckIcon strokeWidth={4.5} className="text-green-500 text-xs" />
                               Rera Approved
                             </p>
-                          )}
+                          ):""}
                         </div>
                       ) : (
                         <div className="flex justify-between items-center mt-2">
@@ -257,12 +256,12 @@ const fetchProjects = async () => {
                             <Building2 size={16} className="text-primary" />
                             Unit: {proj.units && proj.units !== '-' ? proj.units : 'Not specified'}
                           </p>
-                           {proj.reraApproved && (
+                           {proj.status ? (
                           <p className="text-green-600 text-sm flex items-center gap-1">
                             <CheckIcon strokeWidth={4.5} className="text-green-500 text-xs" />
                             Rera Approved
                           </p>
-                           )}
+                           ):""}
                         </div>
                       )}
                     </div>
