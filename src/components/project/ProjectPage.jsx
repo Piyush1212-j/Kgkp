@@ -142,10 +142,7 @@ const fetchProjects = async () => {
     const hasUnits = p.units && p.units != '-' && p.units.toString().trim() != '';
     console.log("b",hasImage,hasName);
     return hasName && hasImage && (hasLocation || hasUnits);
-  });
-
-  console.log("filteredProjects",filteredProjects);
-  
+  });  
 
   // Apply all filters
   filteredProjects = filteredProjects.filter((p) => {
