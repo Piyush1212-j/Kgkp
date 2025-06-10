@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'aos/dist/aos.css';
+
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('../fonts/NexaLight.woff') format('woff'),
+    url('../fonts/NexaLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('../fonts/NexaBold.woff') format('woff'),
+    url('../fonts/NexaBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+
+body {
+  font-family: 'Nexa', sans-serif;
+  font-weight: 500;
+}
+
+.hero-section .swiper-pagination-bullet {
+  background: transparent !important;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for pagination bullets */
+.hero-section .swiper-pagination {
+  position: absolute;
+  bottom: 3rem !important;
+  left: 3rem !important;
+  display: flex;
+  align-items: center;
+  z-index: 20;
+}
+
+.hero-section .custom-bullet {
+  position: relative;
+  color: white;
+  font-weight: 500;
+  font-size: 0.875rem;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0 0.2rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Active bullet */
+.hero-section .swiper-pagination-bullet-active {
+  opacity: 1;
+  color: #E04E2F;
+}
+
+/* Line AFTER active bullet, not overlapping */
+.hero-section .swiper-pagination-bullet-active:not(:last-child)::after {
+  content: '──────';
+  color: #E04E2F;
+  margin-left: 0.5rem;
+  position: static;
+  /* make it inline */
+  font-size: 0.75rem;
+}
+
+/* No line after last item */
+.hero-section .swiper-pagination-bullet:last-child.swiper-pagination-bullet-active::after {
+  content: '';
+}
+
+
+.category-slider-section .swiper {
+  overflow: unset !important;
+}
+
+.category-slider-section .swiper-slide .category-slider-subtitle {
+  display: none;
+}
+
+.category-slider-section .swiper-slide.swiper-slide-active .category-slider-subtitle {
+  display: block;
+}
+
+
+.category-slider .swiper-slide .swiper-slide-content {
+  transition: transform 0.3s ease-in-out, z-index 0.3s;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Center slide */
+.category-slider .swiper-slide-active .swiper-slide-content {
+  transform: translateY(-5px) scale(1.05);
+  /* Slight zoom effect for center slide */
+  z-index: 10;
+  width: 105%;
+  /* Slightly wider center slide to highlight */
+  margin-left: -2%;
+  /* Prevent excessive overlap */
+  margin-right: -2%;
+  /* Prevent excessive overlap */
+  padding: 0;
+}
+
+
+/* Side slides */
+.category-slider .swiper-slide:not(.swiper-slide-active) .swiper-slide-content {
+  transform: scale(0.9);
+  z-index: 1;
+  width: 100%;
+  /* Keep the width same for all slides */
+  height: 90%;
+}
+
+.category-slider .swiper-slide .category-slider-subtitle {
+  display: none;
+}
+
+.category-slider .swiper-slide.swiper-slide-active .category-slider-subtitle {
+  display: block;
+}
+
+.custom-pagination .swiper-pagination-bullet {
+  width: 1.5rem;
+  /* w-6 */
+  height: 0.5rem;
+  /* h-2 */
+  background-color: white;
+  opacity: 0.5;
+  border-radius: 9999px;
+  /* rounded-full */
+  transition: all 0.3s ease;
+  /* transition-all duration-300 */
+}
+
+.custom-pagination .swiper-pagination-bullet:hover {
+  opacity: 0.8;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background-color: #FF5722;
+  /* replace with your actual `bg-secondary` color */
+  opacity: 1;
+  width: 2rem;
+  /* w-8 */
+}
+
+
+
+.custom-pagination2 .swiper-pagination-bullet {
+  width: 1.5rem;
+  /* w-6 */
+  height: 0.5rem;
+  /* h-2 */
+  background-color: a6a6a6;
+  opacity: 0.5;
+  border-radius: 9999px;
+  /* rounded-full */
+  transition: all 0.3s ease;
+  /* transition-all duration-300 */
+}
+
+.custom-pagination2 .swiper-pagination-bullet:hover {
+  opacity: 0.8;
+}
+
+.custom-pagination2 .swiper-pagination-bullet-active {
+  background-color: #FF5722;
+  opacity: 1;
+  width: 2rem;
+}
+
+.category-slider-section .swiper-wrapper {
+  padding-left: 2.5%;
+}
+
+.container-fluid {
+  padding-left: 6.5rem;
+  padding-right: 6.5rem;
+}
+
+@media (max-width: 768px) {
+  .container-fluid {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
